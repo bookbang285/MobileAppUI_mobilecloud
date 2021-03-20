@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 void main() => runApp(MyApp());
 
@@ -87,7 +88,11 @@ class _MyAppState extends State<MyApp> {
             children: [
               IconButton(
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    EasyLoading.showInfo('CALL ...........');
+                  });
+                },
                 icon: new Icon(Icons.call),
               ),
               Container(
@@ -159,6 +164,7 @@ class _MyAppState extends State<MyApp> {
         fit: BoxFit.cover,
       ),
     );
+
     return MaterialApp(
       title: 'สวัสดีครับท่านสมาชิก',
       home: Scaffold(
@@ -171,6 +177,7 @@ class _MyAppState extends State<MyApp> {
           ],
         ),
       ),
+      builder: EasyLoading.init(),
     );
   }
 }
