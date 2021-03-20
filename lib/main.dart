@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'dart:html' as html;
 
 void main() => runApp(MyApp());
 
@@ -136,7 +137,10 @@ class _MyAppState extends State<MyApp> {
             children: [
               IconButton(
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {
+                  html.window.open(
+                      'https://www.youtube.com/watch?v=fTFKfWSGYrQ', '######');
+                },
                 icon: new Icon(Icons.share),
               ),
               Container(
