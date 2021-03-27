@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'dart:html' as html;
 
 void main() => runApp(MyApp());
 
@@ -137,10 +136,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               IconButton(
                 color: Colors.black,
-                onPressed: () {
-                  html.window.open(
-                      'https://www.youtube.com/watch?v=fTFKfWSGYrQ', '######');
-                },
+                onPressed: () {},
                 icon: new Icon(Icons.share),
               ),
               Container(
@@ -162,9 +158,9 @@ class _MyAppState extends State<MyApp> {
 
     Widget iM = Container(
       child: Image.asset(
-        '/_DSC4586.jpg',
-        width: 500,
-        height: 400,
+        'assets/test.jpg',
+        width: 300,
+        height: 200,
         fit: BoxFit.cover,
       ),
     );
